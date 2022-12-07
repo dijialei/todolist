@@ -1,0 +1,9 @@
+body{
+    background: url(bg.gif);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}

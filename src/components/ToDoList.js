@@ -8,7 +8,7 @@ import Todorow from './Todorow';
 export default function ToDoList() {
 
 
-  const [status, setStaus] = useState("");
+  
   const [list, setList] = useState([
     {
       "id": crypto.randomUUID(),
@@ -93,7 +93,7 @@ export default function ToDoList() {
 
   }
   function AddObject() {
-    if (newObject.object == "") {
+    if (newObject.object === "") {
       return;
     } else {
       setAdd(!add);
@@ -116,17 +116,17 @@ export default function ToDoList() {
   function deleteObject(id) {
     //console.log(id);
     setList(
-      list.filter(object => object.id != id)
+      list.filter(object => object.id !== id)
     );
   }
   function updateObject(id) {
     //console.log(id);
-    if (newObject.object == "") {
+    if (newObject.object === "") {
       return;
     }else{
 
       setList (list.map(m => {
-        if (m.id == id) {
+        if (m.id === id) {
           m.object = newObject.object;
           m.state = true;
         };
@@ -147,8 +147,8 @@ export default function ToDoList() {
           <table className='table'>
             <thead>
               <tr>
-                <th>State</th>
-                <th>Object</th>
+                <th className='text-white'><strong>State</strong></th>
+                <th className='text-white'><strong>Object</strong></th>
               </tr></thead>
           </table>
         </div>

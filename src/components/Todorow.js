@@ -1,4 +1,4 @@
-
+import './todorow.css';
 
 export default function Todorow({setList, todo ,getObject}) {
 
@@ -14,7 +14,7 @@ export default function Todorow({setList, todo ,getObject}) {
       <>
         <tr>
           <th scope="row"><input className="btn btn-primary" type="button" value=" Ing " onClick={()=>changeState()}/></th>
-          <td className='text-white' onClick={getObject} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><strong>{todo.object}</strong></td>
+          <td className='text-white pointer' onClick={getObject} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><strong>{todo.object}</strong></td>
         </tr>
 
       </>
@@ -26,7 +26,7 @@ export default function Todorow({setList, todo ,getObject}) {
       <>
         <tr>
           <th scope="row"><input className="btn btn-secondary" type="button" value="Done" onClick={()=>changeState()}/></th>
-          <td  onClick={getObject} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><del>{todo.object}</del></td>
+          <td  className="pointer" onClick={getObject} data-bs-toggle="modal" data-bs-target="#staticBackdrop"><del>{todo.object}</del></td>
         </tr>
 
       </>
